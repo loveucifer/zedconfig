@@ -1,0 +1,358 @@
+{
+  // Base Settings
+  "centered_layout": {
+    "left_padding": 0.1,
+  },
+  "edit_predictions": {
+    "mode": "subtle",
+  },
+  "agent_servers": {
+    "opencode": {
+      "type": "registry",
+    },
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Material Icon Theme",
+    "dark": "JetBrains Icons Dark",
+  },
+  "tab_bar": {
+    "show_pinned_tabs_in_separate_row": false,
+    "show_tab_bar_buttons": false,
+    "show_nav_history_buttons": false,
+    "show": true,
+  },
+  "debugger": {
+    "button": false,
+  },
+  "search": {
+    "button": false,
+  },
+  "diagnostics": {
+    "button": false,
+  },
+  "status_bar": {
+    "cursor_position_button": false,
+    "active_language_button": false,
+  },
+  "agent_ui_font_size": 17.0,
+  "ui_font_family": "JetBrains Mono",
+  "project_panel": {
+    "indent_size": 22.0,
+    "dock": "left",
+  },
+  "title_bar": {
+    "show_user_menu": true,
+    "show_menus": false,
+    "show_sign_in": true,
+    "show_user_picture": true,
+    "show_onboarding_banner": false,
+    "show_project_items": true,
+    "show_branch_name": true,
+    "show_branch_icon": false,
+  },
+  "base_keymap": "VSCode",
+  "agent": {
+    "tool_permissions": {
+      "default": "allow",
+    },
+    "default_profile": "write",
+    "default_model": {
+      "effort": "high",
+      "enable_thinking": true,
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-6",
+    },
+    "model_parameters": [],
+  },
+
+  "restore_on_startup": "last_workspace",
+
+  // 1. Set Active Theme to Asteroid (Controls Text)
+  "theme": "Asteroid",
+
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_size": 14.0,
+  "ui_font_size": 15.0,
+
+  // 2. Keep your Custom Black UI (Controls Window/Backgrounds)
+  // These overrides sit ON TOP of Asteroid, forcing the UI to be black
+  "experimental.theme_overrides": {
+    "editor.background": "#000000",
+    "editor.gutter.background": "#000000",
+    "terminal.background": "#000000",
+    "panel.background": "#000000",
+    "toolbar.background": "#000000",
+    "tab_bar.background": "#000000",
+    "title_bar.background": "#000000",
+    "status_bar.background": "#000000",
+    "elevated_surface.background": "#0a0a0a",
+    "surface.background": "#050505",
+  },
+
+  // Editor Behavior
+  "tab_size": 2,
+  "soft_wrap": "editor_width",
+  "show_whitespaces": "selection",
+  "relative_line_numbers": "disabled",
+  "cursor_blink": false,
+  "vim_mode": false,
+
+  // UI Elements
+  "scrollbar": {
+    "show": "auto",
+  },
+  "tabs": {
+    "file_icons": false,
+    "git_status": true,
+    "close_position": "right",
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": true,
+  },
+
+  // Terminal
+  "terminal": {
+    "button": true,
+    "cursor_shape": "bar",
+    "font_family": "JetBrainsMono Nerd Font Mono",
+    "font_size": 14.0,
+    "shell": {
+      "program": "zsh",
+    },
+    "working_directory": "current_project_directory",
+    "blinking": "on",
+  },
+
+  // Auto-save and Formatting
+  "autosave": "on_focus_change",
+  "format_on_save": "on",
+  "remove_trailing_whitespace_on_save": true,
+  "ensure_final_newline_on_save": true,
+
+  // File Settings
+  "file_icons": true,
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware",
+  },
+
+  // Git Integration
+  "git": {
+    "inline_blame": {
+      "enabled": true,
+    },
+  },
+
+  // Language-specific settings
+  "languages": {
+    "JavaScript": {
+      "tab_size": 2,
+      "format_on_save": "on",
+    },
+    "TypeScript": {
+      "tab_size": 2,
+      "format_on_save": "on",
+    },
+    "Python": {
+      "tab_size": 4,
+      "format_on_save": "on",
+    },
+    "Rust": {
+      "tab_size": 4,
+      "format_on_save": "on",
+    },
+    "JSON": {
+      "tab_size": 2,
+      "format_on_save": "on",
+    },
+  },
+
+  // LSP Settings
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy",
+        },
+      },
+    },
+  },
+
+  // Telemetry
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+
+  // 3. Define Asteroid so it can be used as the base theme
+  "themes": [
+    {
+      "name": "Asteroid",
+      "appearance": "dark",
+      "style": {
+        // ── Borders ──────────────────────────────────────────────
+        "border": "#FFD70022",
+        "border.variant": "#FFD70033",
+        "border.focused": "#FFD70088",
+        "border.selected": "#FFD700AA",
+        "border.transparent": "#00000000",
+
+        // ── Backgrounds ──────────────────────────────────────────
+        "background": "#000000",
+        "surface.background": "#050505",
+        "elevated_surface.background": "#0A0A0A",
+
+        // ── Generic UI elements ──────────────────────────────────
+        "element.background": "#000000",
+        "element.hover": "#1A1500", // very dark gold tint on hover
+        "element.active": "#1A1500",
+        "element.selected": "#1A1500",
+        "element.disabled": "#0A0A0A",
+
+        // ── Icons ─────────────────────────────────────────────────
+        // Default icon colour → white; active/selected → gold
+        "icon": "#FFFFFF",
+        "icon.muted": "#666666",
+        "icon.disabled": "#333333",
+        "icon.placeholder": "#555555",
+        "icon.accent": "#FFD700",
+
+        // ── Text ─────────────────────────────────────────────────
+        "text": "#FFFFFF",
+        "text.muted": "#B8B8B8",
+        "text.placeholder": "#777777",
+        "text.disabled": "#555555",
+        "text.accent": "#FFD700",
+
+        // ── Editor ───────────────────────────────────────────────
+        "editor.foreground": "#FFFFFF",
+        "editor.background": "#000000",
+        "editor.gutter.background": "#000000",
+        "editor.line_number": "#666666",
+        "editor.active_line_number": "#FFD700",
+        "editor.active_line.background": "#111111",
+        "editor.highlighted_line.background": "#1A150033",
+        "editor.selection.background": "#FFD70033",
+        "editor.selection.border": "#FFD70066",
+        "editor.inactive_selection.background": "#FFD70018",
+
+        // ── Find / search highlight ───────────────────────────────
+        "search.match_background": "#FFD70044",
+
+        // ── Links ────────────────────────────────────────────────
+        "link_text.hover": "#FFD700",
+
+        // ── VCS / diff colours ───────────────────────────────────
+        "created": "#FFD700",
+        "modified": "#E6C15A",
+        "deleted": "#FF4444",
+        "conflict": "#FF8800",
+        "hidden": "#555555",
+        "ignored": "#444444",
+        "renamed": "#FFD700",
+
+        // ── Scrollbar ────────────────────────────────────────────
+        "scrollbar_thumb.background": "#FFD70055",
+        "scrollbar.thumb.hover_background": "#FFD700",
+        "scrollbar.track.background": "#000000",
+        "scrollbar.track.border": "#FFD70011",
+
+        // ── Tabs ─────────────────────────────────────────────────
+        "tab_bar.background": "#000000",
+        "tab.active_background": "#111111",
+        "tab.inactive_background": "#000000",
+
+        // ── Panels / chrome ──────────────────────────────────────
+        "panel.background": "#000000",
+        "panel.focused_border": "#FFD70088",
+        "toolbar.background": "#000000",
+        "title_bar.background": "#000000",
+        "status_bar.background": "#000000",
+
+        // ── Drop targets / drag ───────────────────────────────────
+        "drop_target.background": "#FFD70022",
+
+        // ── Pane focus border ────────────────────────────────────
+        "pane.focused_border": "#FFD700",
+
+        // ── Ghost element (autocomplete preview) ──────────────────
+        "ghost_element.background": "#000000",
+        "ghost_element.hover": "#1A1500",
+        "ghost_element.active": "#1A1500",
+        "ghost_element.selected": "#1A1500",
+        "ghost_element.disabled": "#0A0A0A",
+
+        // ── Unreachable / predictive text ────────────────────────
+        "predictive": "#555555",
+        "predictive.border": "#FFD70033",
+        "predictive.background": "#0A0A0A",
+
+        // ── Syntax highlighting (UNCHANGED from original) ─────────
+        "syntax": {
+          "keyword": {
+            "color": "#E6C15A",
+          },
+          "function": {
+            "color": "#FFD700",
+          },
+          "type": {
+            "color": "#FFD700",
+          },
+          "constant": {
+            "color": "#FFD700",
+          },
+          "boolean": {
+            "color": "#FFD700",
+          },
+          "operator": {
+            "color": "#E6C15A",
+          },
+          "number": {
+            "color": "#C9A227",
+          },
+          "string": {
+            "color": "#E6C15A",
+          },
+          "variable": {
+            "color": "#FFFFFF",
+          },
+          "variable.parameter": {
+            "color": "#FFD700",
+            "font_style": "italic",
+          },
+          "comment": {
+            "color": "#777777",
+          },
+          "punctuation": {
+            "color": "#FFD700",
+          },
+          "property": {
+            "color": "#E6C15A",
+          },
+        },
+
+        // ── Terminal ─────────────────────────────────────────────
+        "terminal.background": "#000000",
+        "terminal.foreground": "#FFFFFF",
+        "terminal.ansi.black": "#000000",
+        "terminal.ansi.red": "#FF4444",
+        "terminal.ansi.green": "#E6C15A",
+        "terminal.ansi.yellow": "#FFD700",
+        "terminal.ansi.blue": "#C9A227",
+        "terminal.ansi.magenta": "#FFD700",
+        "terminal.ansi.cyan": "#E6C15A",
+        "terminal.ansi.white": "#FFFFFF",
+        "terminal.ansi.bright_black": "#333333",
+        "terminal.ansi.bright_red": "#FF6666",
+        "terminal.ansi.bright_green": "#FFD700",
+        "terminal.ansi.bright_yellow": "#FFE566",
+        "terminal.ansi.bright_blue": "#E6C15A",
+        "terminal.ansi.bright_magenta": "#FFD700",
+        "terminal.ansi.bright_cyan": "#FFD700",
+        "terminal.ansi.bright_white": "#FFFFFF",
+      },
+    },
+  ],
+}
